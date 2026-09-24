@@ -1,8 +1,9 @@
 import Link from "next/link";
-import { Clock3, Flame, Star } from "lucide-react";
 
 import { IExercise } from "@/types/exercise.type";
 import Image from "next/image";
+import { FaRegClock, FaRegStar } from "react-icons/fa";
+import { LuFlame } from "react-icons/lu";
 
 const ExerciseCard = ({ exercise }: { exercise: IExercise }) => {
   return (
@@ -41,17 +42,19 @@ const ExerciseCard = ({ exercise }: { exercise: IExercise }) => {
 
         <div className="flex items-center gap-5 text-sm text-[#9CA3AF]">
           <div className="flex items-center gap-1.5">
-            <Clock3 className="h-4 w-4" />
+            <FaRegClock className="h-4 w-4" />
             <span>{exercise.duration} min</span>
           </div>
 
           <div className="flex items-center gap-1.5">
-            <Flame className="h-4 w-4" />
+            <LuFlame className="h-4 w-4" />
+
             <span>{exercise.caloriesBurned} kcal</span>
           </div>
 
           <div className="flex items-center gap-1.5">
-            <Star className="h-4 w-4" />
+            <FaRegStar className="h-4 w-4" />
+
             <span>{exercise.rating}</span>
           </div>
         </div>

@@ -1,5 +1,4 @@
 import { IExercise } from "@/types/exercise.type";
-import { Bookmark, Plus } from "lucide-react";
 import Image from "next/image";
 import TodaysPlanButton from "../view-details-button/TodaysPlanButton";
 import SavedButton from "../view-details-button/SavedButton";
