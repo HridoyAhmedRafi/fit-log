@@ -1,7 +1,6 @@
 "use client";
 import { ExerciesContext } from "@/context/ExerciesContext";
 import { IExercise } from "@/types/exercise.type";
-import { Plus } from "lucide-react";
 import { useContext } from "react";
 import { MdOutlineCalendarToday } from "react-icons/md";
 import { toast } from "react-toastify";
