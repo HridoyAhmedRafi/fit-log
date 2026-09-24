@@ -9,7 +9,7 @@ const Navbar = () => {
     <>
       <li>
         <Link
-          className={`${usePathname() === "/" ? "bg-[#1A2312] text-[#C2F800] rounded-full" : "text-[#9CA3AF]"}`}
+          className={`${usePathname() === "/" ? "bg-[#1A2312] text-[#C2F800] rounded-full font-semibold" : "text-[#9CA3AF] font-semibold"}`}
           href="/"
         >
           Workouts
@@ -17,7 +17,7 @@ const Navbar = () => {
       </li>
       <li>
         <Link
-          className={`${usePathname() === "/my-plan" ? "bg-[#1A2312] text-[#C2F800] rounded-full" : "text-[#9CA3AF]"}`}
+          className={`${usePathname() === "/my-plan" ? "bg-[#1A2312] text-[#C2F800] rounded-full font-semibold" : "text-[#9CA3AF] font-semibold"}`}
           href="/my-plan"
         >
           My Plan
