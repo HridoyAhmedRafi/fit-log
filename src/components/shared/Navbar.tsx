@@ -3,8 +3,13 @@ import Image from "next/image";
 import logo from "@/assets/logo.png";
 import Link from "next/link";
 import { usePathname } from "next/navigation";
+import { useContext } from "react";
+import { ExerciesContext } from "@/context/ExerciesContext";
 
 const Navbar = () => {
+  const { todaysPlan } = useContext(ExerciesContext);
+  const { savedExercies } = useContext(ExerciesContext);
+
   const links = (
     <>
       <li>
@@ -76,7 +81,7 @@ const Navbar = () => {
             >
               Plan{" "}
               <span className=" bg-[#C2F800] text-[#000000] font-semibold px-2 rounded-full">
-                {0}
+                {todaysPlan.length}
               </span>
             </Link>
             <Link
@@ -85,7 +90,7 @@ const Navbar = () => {
             >
               Saved{" "}
               <span className=" border border-[#2D313B] text-[#D1D5DB] font-semibold px-2 rounded-full">
-                {0}
+                {savedExercies.length}
               </span>
             </Link>
           </div>

@@ -9,7 +9,7 @@ interface IExerciesContext {
   setSavedExercies: React.Dispatch<React.SetStateAction<IExercise[]>>;
 }
 
-const ExerciesContext = createContext<IExerciesContext>({
+export const ExerciesContext = createContext<IExerciesContext>({
   todaysPlan: [],
   setTodaysPlan: () => {},
   savedExercies: [],

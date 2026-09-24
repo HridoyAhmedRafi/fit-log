@@ -1,6 +1,8 @@
 import { IExercise } from "@/types/exercise.type";
 import { Bookmark, Plus } from "lucide-react";
 import Image from "next/image";
+import TodaysPlanButton from "../view-details-button/TodaysPlanButton";
+import SavedButton from "../view-details-button/SavedButton";
 
 const ViewDetailsCard = ({ exercise }: { exercise: IExercise }) => {
   return (
@@ -104,15 +106,8 @@ const ViewDetailsCard = ({ exercise }: { exercise: IExercise }) => {
           </div>
 
           <div className="mt-6 flex flex-wrap gap-3">
-            <button className="btn rounded-2xl shadow-none border-0 bg-[#C2F800] text-black hover:bg-[#C2F800]">
-              <Plus className="h-4 w-4" />
-              Add to todays plan
-            </button>
-
-            <button className="btn border rounded-2xl shadow-none border-[#2D313B] bg-transparent text-[#D1D5DB] hover:border-[#3A3F4B] hover:bg-transparent">
-              <Bookmark className="h-4 w-4" />
-              Save for later
-            </button>
+            <TodaysPlanButton exercise={exercise}></TodaysPlanButton>
+            <SavedButton exercise={exercise}></SavedButton>
           </div>
         </div>
       </div>
