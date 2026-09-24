@@ -3,25 +3,25 @@ import { IExercise } from "@/types/exercise.type";
 import React, { createContext, ReactNode, useState } from "react";
 
 interface IExerciesContext {
-  todaysExercies: IExercise[];
-  setTodaysExercies: React.Dispatch<React.SetStateAction<IExercise[]>>;
+  todaysPlan: IExercise[];
+  setTodaysPlan: React.Dispatch<React.SetStateAction<IExercise[]>>;
   savedExercies: IExercise[];
   setSavedExercies: React.Dispatch<React.SetStateAction<IExercise[]>>;
 }
 
 const ExerciesContext = createContext<IExerciesContext>({
-  todaysExercies: [],
-  setTodaysExercies: () => {},
+  todaysPlan: [],
+  setTodaysPlan: () => {},
   savedExercies: [],
   setSavedExercies: () => {},
 });
 
 const ExerciesProvider = ({ children }: { children: ReactNode }) => {
-  const [todaysExercies, setTodaysExercies] = useState<IExercise[]>([]);
+  const [todaysPlan, setTodaysPlan] = useState<IExercise[]>([]);
   const [savedExercies, setSavedExercies] = useState<IExercise[]>([]);
   const sharedData = {
-    todaysExercies,
-    setTodaysExercies,
+    todaysPlan,
+    setTodaysPlan,
     savedExercies,
     setSavedExercies,
   };
