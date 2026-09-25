@@ -4,7 +4,7 @@ const CardLoading = () => {
     <div className="bg-[#0f1115]">
       <div className="container mx-auto px-4 py-5">
         <div className=" grid grid-cols-1 gap-8 rounded-2xl border border-[#2D313B] bg-[#15171D] p-6 lg:grid-cols-2">
-          <div className="h-[650px] rounded-2xl bg-[#2A2E38]" />
+          <div className="162.5 rounded-2xl bg-[#2A2E38]" />
 
           <div className="space-y-6">
             <div className="space-y-3">
