@@ -1,6 +1,6 @@
 "use client";
 
-import ActiveTabCard from "@/components/my-plan-tab/TodaysPlanCard";
+import ActiveTabCard from "@/components/my-plan-tab/ActiveTabCard";
 import { ExerciesContext } from "@/context/ExerciesContext";
 import Link from "next/link";
 import { useContext, useState } from "react";

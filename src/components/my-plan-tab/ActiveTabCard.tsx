@@ -2,6 +2,8 @@ import { IExercise } from "@/types/exercise.type";
 import Image from "next/image";
 import Link from "next/link";
 import { FaCheck } from "react-icons/fa";
+import RemoveButton from "../exercies-remove-button/RemoveButton";
+import MarkAsDoneButton from "../exercies-remove-button/MarkAsDoneButton";
 
 const ActiveTabCard = ({
   plan,
@@ -51,16 +53,14 @@ const ActiveTabCard = ({
           </button>
         </Link>
 
-        {showMarkAsDone && (
-          <button className="flex cursor-pointer items-center gap-2 rounded-full bg-[#CCFF00] px-4 py-2 text-sm font-medium text-[#000000]">
-            <FaCheck />
-            Mark as Done
-          </button>
-        )}
+        <MarkAsDoneButton
+          showMarkAsDone={showMarkAsDone}
+        ></MarkAsDoneButton>
 
-        <button className="cursor-pointer flex h-9 w-9 items-center justify-center rounded-full text-xl text-gray-400  hover:text-red-500">
-          ×
-        </button>
+        <RemoveButton
+          plan={plan}
+          showMarkAsDone={showMarkAsDone}
+        ></RemoveButton>
       </div>
     </div>
   );

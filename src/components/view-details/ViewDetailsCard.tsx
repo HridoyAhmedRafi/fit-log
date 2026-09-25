@@ -1,7 +1,7 @@
 import { IExercise } from "@/types/exercise.type";
 import Image from "next/image";
-import TodaysPlanButton from "../view-details-button/TodaysPlanButton";
-import SavedButton from "../view-details-button/SavedButton";
+import TodaysPlanButton from "../view-details-card-button/TodaysPlanButton";
+import SavedButton from "../view-details-card-button/SavedButton";
 
 const ViewDetailsCard = ({ exercise }: { exercise: IExercise }) => {
   return (
