@@ -3,7 +3,7 @@ import Link from "next/link";
 import { IExercise } from "@/types/exercise.type";
 import Image from "next/image";
 import { FaRegClock, FaRegStar } from "react-icons/fa";
-import { LuFlame } from "react-icons/lu";
+import { FaFireFlameCurved } from "react-icons/fa6";
 
 const ExerciseCard = ({ exercise }: { exercise: IExercise }) => {
   return (
@@ -42,12 +42,12 @@ const ExerciseCard = ({ exercise }: { exercise: IExercise }) => {
 
         <div className="flex items-center gap-5 text-sm text-[#9CA3AF]">
           <div className="flex items-center gap-1.5">
-            <FaRegClock className="h-4 w-4" />
+            <FaRegClock className="h-4 w-4 " />
             <span>{exercise.duration} min</span>
           </div>
 
           <div className="flex items-center gap-1.5">
-            <LuFlame className="h-4 w-4" />
+            <FaFireFlameCurved className="h-4 w-4" />
 
             <span>{exercise.caloriesBurned} kcal</span>
           </div>

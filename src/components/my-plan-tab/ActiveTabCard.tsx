@@ -1,9 +1,10 @@
 import { IExercise } from "@/types/exercise.type";
 import Image from "next/image";
 import Link from "next/link";
-import { FaCheck } from "react-icons/fa";
 import RemoveButton from "../exercies-remove-button/RemoveButton";
 import MarkAsDoneButton from "../exercies-remove-button/MarkAsDoneButton";
+import { FaRegClock, FaRegStar } from "react-icons/fa";
+import { FaFireFlameCurved } from "react-icons/fa6";
 
 const ActiveTabCard = ({
   plan,
@@ -31,16 +32,21 @@ const ActiveTabCard = ({
 
           <p className="mt-1 text-sm text-[#8A92A0]">{plan.equipment}</p>
 
-          <div className="mt-3 flex flex-wrap items-center gap-2 text-sm">
-            <span className="rounded-full  py-1 text-[#D1D5DB]">
+          <div className="mt-3 flex flex-wrap items-center gap-3 text-sm">
+            <span className="rounded-full  py-1 text-[#D1D5DB] flex items-center gap-1">
+              <FaRegClock className="text-[#CCFF00]" />
               {plan.duration} min
             </span>
 
-            <span className="rounded-full  py-1 text-[#D1D5DB]">
-              {plan.caloriesBurned} cal
+            <span className="rounded-full  py-1 text-[#D1D5DB] flex items-center gap-1">
+              <FaFireFlameCurved className="text-[#CCFF00]" />
+              {plan.caloriesBurned} kcal
             </span>
 
-            <span className="font-medium text-[#D1D5DB]">⭐ {plan.rating}</span>
+            <span className=" text-[#D1D5DB] flex items-center gap-1">
+              <FaRegStar className="text-[#CCFF00]" />
+              {plan.rating}
+            </span>
           </div>
         </div>
       </div>
@@ -53,9 +59,7 @@ const ActiveTabCard = ({
           </button>
         </Link>
 
-        <MarkAsDoneButton
-          showMarkAsDone={showMarkAsDone}
-        ></MarkAsDoneButton>
+        <MarkAsDoneButton showMarkAsDone={showMarkAsDone}></MarkAsDoneButton>
 
         <RemoveButton
           plan={plan}

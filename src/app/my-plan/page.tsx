@@ -24,6 +24,12 @@ const MyPlanPage = () => {
   return (
     <div className="min-h-screen bg-[#0C0D10]">
       <div className="container mx-auto px-4 py-10">
+        <div className="py-5">
+          <h1 className="font-bold text-white text-[30px]">MY PLAN</h1>
+          <p className="text-[#8A92A0] text-[14px] font-semibold">
+            Cap of five lifts for today. Finish them, then load more.
+          </p>
+        </div>
         <div className="rounded-2xl border border-[#242832] bg-[#15171D]">
           <div className="grid grid-cols-3">
             <div className="border-r border-[#242832] px-6 py-7">
