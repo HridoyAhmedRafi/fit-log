@@ -59,7 +59,10 @@ const ActiveTabCard = ({
           </button>
         </Link>
 
-        <MarkAsDoneButton showMarkAsDone={showMarkAsDone}></MarkAsDoneButton>
+        <MarkAsDoneButton
+          plan={plan}
+          showMarkAsDone={showMarkAsDone}
+        ></MarkAsDoneButton>
 
         <RemoveButton
           plan={plan}

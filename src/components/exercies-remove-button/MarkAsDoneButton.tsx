@@ -1,19 +1,31 @@
 "use client";
 
-import { useState } from "react";
+import { ExerciesContext } from "@/context/ExerciesContext";
+import { IExercise } from "@/types/exercise.type";
+import { useContext, useState } from "react";
 import toast from "react-hot-toast";
 
 import { FaCheck } from "react-icons/fa";
 
-const MarkAsDoneButton = ({ showMarkAsDone }: { showMarkAsDone: boolean }) => {
+const MarkAsDoneButton = ({
+  showMarkAsDone,
+  plan,
+}: {
+  showMarkAsDone: boolean;
+  plan: IExercise;
+}) => {
   const [markAsDone, setMarkAsDone] = useState(false);
+  const { todaysPlan, setTodaysPlan } = useContext(ExerciesContext);
 
   const handleMarkAsDoneButton = (action: true | false) => {
+    const reaminingTodayExercies = todaysPlan.filter(
+      (todaysItem) => todaysItem.id !== plan.id,
+    );
     toast.success("Workout done", {
       position: "top-right",
     });
-
     setMarkAsDone(action);
+    setTodaysPlan(reaminingTodayExercies);
   };
   return (
     <div>
