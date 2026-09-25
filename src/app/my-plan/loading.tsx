@@ -3,8 +3,8 @@ const CardLoading = () => {
   return (
     <div className="bg-[#0f1115]">
       <div className="container mx-auto px-4 py-5">
-        <div className=" grid grid-cols-1 gap-8 rounded-2xl border border-[#2D313B] bg-[#15171D] p-6 lg:grid-cols-2">
-          <div className="162.5 rounded-2xl bg-[#2A2E38]" />
+        <div className="min-h-screen grid grid-cols-1 gap-8 rounded-2xl border border-[#2D313B] bg-[#15171D] p-6 lg:grid-cols-2">
+          <div className="w-full h-150 rounded-2xl bg-[#2A2E38]" />
 
           <div className="space-y-6">
             <div className="space-y-3">
@@ -61,36 +61,6 @@ const CardLoading = () => {
                   <div className="h-4 w-12 rounded bg-[#2A2E38]" />
                 </div>
               </div>
-            </div>
-
-            <div className="space-y-4">
-              <div className="h-5 w-32 rounded bg-[#2A2E38]" />
-
-              <div className="space-y-3">
-                <div className="flex gap-3">
-                  <div className="h-7 w-7 shrink-0 rounded-full bg-[#2A2E38]" />
-                  <div className="h-4 flex-1 rounded bg-[#2A2E38]" />
-                </div>
-
-                <div className="flex gap-3">
-                  <div className="h-7 w-7 shrink-0 rounded-full bg-[#2A2E38]" />
-                  <div className="h-4 flex-1 rounded bg-[#2A2E38]" />
-                </div>
-
-                <div className="flex gap-3">
-                  <div className="h-7 w-7 shrink-0 rounded-full bg-[#2A2E38]" />
-                  <div className="h-4 flex-1 rounded bg-[#2A2E38]" />
-                </div>
-
-                <div className="flex gap-3">
-                  <div className="h-7 w-7 shrink-0 rounded-full bg-[#2A2E38]" />
-                  <div className="h-4 flex-1 rounded bg-[#2A2E38]" />
-                </div>
-              </div>
-            </div>
-            <div className="flex gap-3">
-              <div className="h-11 flex-1 rounded-lg bg-[#2A2E38]" />
-              <div className="h-11 flex-1 rounded-lg bg-[#2A2E38]" />
             </div>
           </div>
         </div>
