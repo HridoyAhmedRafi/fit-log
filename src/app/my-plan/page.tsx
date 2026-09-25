@@ -48,8 +48,8 @@ const MyPlanPage = () => {
           </p>
         </div>
         <div className="rounded-2xl border border-[#242832] bg-[#15171D]">
-          <div className="grid grid-cols-3">
-            <div className="border-r border-[#242832] px-6 py-7">
+          <div className="grid grid-cols-1 md:grid-cols-3">
+            <div className=" border-b border-[#242832] md:border-b-0 md:border-r md:border-[#242832] px-6 py-7">
               <p className="text-sm text-[#9CA3AF]">Exercises</p>
 
               <p className="mt-1 text-3xl font-bold text-[#C2F800]">
@@ -57,7 +57,7 @@ const MyPlanPage = () => {
               </p>
             </div>
 
-            <div className="border-r border-[#242832] px-6 py-7">
+            <div className="border-b border-[#242832] md:border-b-0 md:border-r md:border-[#242832] px-6 py-7">
               <p className="text-sm text-[#9CA3AF]">Minutes</p>
 
               <p className="mt-1 text-3xl font-bold text-white">
@@ -75,7 +75,7 @@ const MyPlanPage = () => {
           </div>
         </div>
 
-        <div className="mt-7 flex items-center justify-between ">
+        <div className="mt-7 flex flex-col md:flex-row gap-3 items-center justify-between ">
           <div className=" flex rounded-xl border border-[#242832] bg-[#15171D] p-1">
             <button
               onClick={() => setActiveTab("today")}
@@ -100,7 +100,7 @@ const MyPlanPage = () => {
             </button>
           </div>
 
-          <div className="flex items-center gap-4">
+          <div className="flex  items-center gap-4">
             <span className="  whitespace-nowrap text-sm font-semibold text-[#8A92A0]">
               Sort by
             </span>
@@ -110,7 +110,7 @@ const MyPlanPage = () => {
               onChange={(e) =>
                 setSortBy(e.target.value as "duration" | "calories" | "rating")
               }
-              className="px-15 py-5 select select-sm rounded-[10px] border-[#242832] bg-[#171a21] font-semibold text-white"
+              className="px-11 py-5 select select-sm rounded-[10px] border-[#242832] bg-[#171a21] font-semibold text-white"
             >
               <option value="duration">Duration</option>
               <option value="calories">Calories</option>

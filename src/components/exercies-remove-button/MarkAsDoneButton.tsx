@@ -33,7 +33,7 @@ const MarkAsDoneButton = ({
         <button
           disabled={markAsDone}
           onClick={() => handleMarkAsDoneButton(true)}
-          className="flex cursor-pointer items-center gap-2 rounded-full bg-[#CCFF00] px-4 py-2 text-sm font-medium text-[#000000] disabled:cursor-not-allowed disabled:bg-[#4B5563] disabled:text-[#9CA3AF] disabled:opacity-60"
+          className=" flex cursor-pointer items-center gap-2 rounded-full bg-[#CCFF00] px-4 py-2 whitespace-nowrap text-[10px] sm:text-sm font-medium text-[#000000] disabled:cursor-not-allowed disabled:bg-[#4B5563] disabled:text-[#9CA3AF] disabled:opacity-60"
         >
           <FaCheck />
           Mark as Done

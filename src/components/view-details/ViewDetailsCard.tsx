@@ -104,7 +104,7 @@ const ViewDetailsCard = ({ exercise }: { exercise: IExercise }) => {
             </ol>
           </div>
 
-          <div className="mt-6 flex gap-3">
+          <div className="mt-6 flex flex-wrap gap-3">
             <TodaysPlanButton exercise={exercise}></TodaysPlanButton>
             <SavedButton exercise={exercise}></SavedButton>
           </div>

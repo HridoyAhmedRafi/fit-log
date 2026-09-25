@@ -22,10 +22,10 @@ const TodaysPlanButton = ({ exercise }: { exercise: IExercise }) => {
   };
 
   return (
-    <div>
+    <div >
       <button
         onClick={() => handleTodaysPlan()}
-        className="btn rounded-2xl whitespace-nowrap shadow-none border-0 bg-[#C2F800] text-black hover:bg-[#C2F800]"
+        className="btn rounded-2xl  shadow-none border-0 bg-[#C2F800] text-black hover:bg-[#C2F800]"
       >
         <MdOutlineCalendarToday className="h-4 w-4" />
         Add to todays plan
