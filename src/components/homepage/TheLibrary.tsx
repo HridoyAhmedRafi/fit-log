@@ -18,7 +18,7 @@ const TheLibrary = async () => {
           Twelve lifts covering every major muscle group.
         </p>
       </div>
-      <div className="grid grid-cols-3 gap-5 mt-7">
+      <div id="library" className="grid grid-cols-3 gap-5 mt-7">
         {AllExercise.map((exercise: IExercise) => (
           <ExerciseCard exercise={exercise} key={exercise.id}></ExerciseCard>
         ))}

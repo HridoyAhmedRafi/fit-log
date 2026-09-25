@@ -1,5 +1,6 @@
 import banner from "@/assets/banner.png";
 import Image from "next/image";
+import { FaArrowDown } from "react-icons/fa";
 
 const Banner = () => {
   return (
@@ -15,9 +16,10 @@ const Banner = () => {
         </p>
         <a
           href="#library"
-          className="text-[#000000] bg-[#C2F800] text-[12px] px-5 p-3 rounded font-bold cursor-pointer"
+          className="text-[#000000] bg-[#C2F800] text-[12px] px-5 p-3 rounded font-bold cursor-pointer flex items-center gap-2 w-fit"
         >
           BROWSE WORKOUTS
+          <FaArrowDown className="text-[10px]" />
         </a>
       </div>
 
