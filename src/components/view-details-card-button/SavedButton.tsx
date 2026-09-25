@@ -26,7 +26,7 @@ const SavedButton = ({ exercise }: { exercise: IExercise }) => {
     <div>
       <button
         onClick={() => handleSavedButton()}
-        className="btn border rounded-2xl shadow-none border-[#2D313B] bg-transparent text-[#D1D5DB] hover:border-[#3A3F4B] hover:bg-transparent"
+        className="btn border whitespace-nowrap rounded-2xl shadow-none border-[#2D313B] bg-transparent text-[#D1D5DB] hover:border-[#3A3F4B] hover:bg-transparent"
       >
         <FaRegBookmark className="h-4 w-4" />
         Save for later
