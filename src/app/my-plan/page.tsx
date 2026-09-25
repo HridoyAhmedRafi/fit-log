@@ -3,7 +3,7 @@
 import ActiveTabCard from "@/components/my-plan-tab/ActiveTabCard";
 import { ExerciesContext } from "@/context/ExerciesContext";
 import Link from "next/link";
-import { useContext, useState } from "react";
+import { Suspense, useContext, useState } from "react";
 
 const MyPlanPage = () => {
   const { todaysPlan, savedExercies } = useContext(ExerciesContext);
@@ -123,8 +123,8 @@ const MyPlanPage = () => {
           {activeExercises.length > 0 ? (
             sortedExercises.map((plan) => (
               <ActiveTabCard
-                plan={plan}
                 key={plan.id}
+                plan={plan}
                 showMarkAsDone={activeTab === "today"}
               />
             ))

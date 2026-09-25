@@ -2,22 +2,22 @@
 import { ExerciesContext } from "@/context/ExerciesContext";
 import { IExercise } from "@/types/exercise.type";
 import { useContext } from "react";
+import toast from "react-hot-toast";
 import { MdOutlineCalendarToday } from "react-icons/md";
-import { toast } from "react-toastify";
 
 const TodaysPlanButton = ({ exercise }: { exercise: IExercise }) => {
   const { todaysPlan, setTodaysPlan } = useContext(ExerciesContext);
 
   const handleTodaysPlan = () => {
     if (todaysPlan.some((todaysItem) => todaysItem.id === exercise.id)) {
-      toast.info(`Already added`, {
-        position: "bottom-right",
+      toast.error("Already added", {
+        position: "top-right",
       });
       return;
     }
     setTodaysPlan([...todaysPlan, exercise]);
-    toast.success(`Added to today's plan`, {
-      position: "bottom-right",
+    toast.success("Added to today's plan", {
+      position: "top-right",
     });
   };
 

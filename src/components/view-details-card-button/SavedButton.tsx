@@ -2,24 +2,24 @@
 import { ExerciesContext } from "@/context/ExerciesContext";
 import { IExercise } from "@/types/exercise.type";
 import { useContext } from "react";
+import toast, { Toaster } from "react-hot-toast";
 import { FaRegBookmark } from "react-icons/fa";
-import { toast } from "react-toastify";
 
 const SavedButton = ({ exercise }: { exercise: IExercise }) => {
   const { savedExercies, setSavedExercies } = useContext(ExerciesContext);
 
   const handleSavedButton = () => {
     if (savedExercies.some((savedItem) => savedItem.id === exercise.id)) {
-      toast.info(`Already added`, {
-        position: "bottom-right",
+      toast.error("Already added", {
+        position: "top-right",
       });
       return;
     }
 
-    setSavedExercies([...savedExercies, exercise]);
-    toast.success(`Saved for later`, {
-      position: "bottom-right",
+    toast.success("Saved for later", {
+      position: "top-right",
     });
+    setSavedExercies([...savedExercies, exercise]);
   };
 
   return (

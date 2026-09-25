@@ -2,6 +2,7 @@
 import { ExerciesContext } from "@/context/ExerciesContext";
 import { IExercise } from "@/types/exercise.type";
 import { useContext } from "react";
+import toast from "react-hot-toast";
 
 const RemoveButton = ({
   plan,
@@ -18,11 +19,17 @@ const RemoveButton = ({
       const reaminingTodayExercies = todaysPlan.filter(
         (todaysItem) => todaysItem.id !== plan.id,
       );
+      toast.success("Removed from Today's Plan", {
+        position: "top-right",
+      });
       setTodaysPlan(reaminingTodayExercies);
     } else {
       const reaminingSavedExercies = savedExercies.filter(
         (savedItem) => savedItem.id !== plan.id,
       );
+      toast.success("Removed from Saved Workouts", {
+        position: "top-right",
+      });
       setSavedExercies(reaminingSavedExercies);
     }
   };

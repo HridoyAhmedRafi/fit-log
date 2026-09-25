@@ -1,17 +1,19 @@
 "use client";
 
 import { useState } from "react";
+import toast from "react-hot-toast";
+
 import { FaCheck } from "react-icons/fa";
-import { toast } from "react-toastify";
 
 const MarkAsDoneButton = ({ showMarkAsDone }: { showMarkAsDone: boolean }) => {
   const [markAsDone, setMarkAsDone] = useState(false);
 
   const handleMarkAsDoneButton = (action: true | false) => {
-    setMarkAsDone(action);
     toast.success("Workout done", {
-      position: "bottom-right",
+      position: "top-right",
     });
+
+    setMarkAsDone(action);
   };
   return (
     <div>
