@@ -101,7 +101,7 @@ const MyPlanPage = () => {
           </div>
 
           <div className="flex items-center gap-4">
-            <span className=" font-semibold whitespace-nowrap text-sm font-semibold text-[#8A92A0]">
+            <span className="  whitespace-nowrap text-sm font-semibold text-[#8A92A0]">
               Sort by
             </span>
 
