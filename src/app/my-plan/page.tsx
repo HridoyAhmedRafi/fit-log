@@ -3,7 +3,7 @@
 import ActiveTabCard from "@/components/my-plan-tab/ActiveTabCard";
 import { ExerciesContext } from "@/context/ExerciesContext";
 import Link from "next/link";
-import { Suspense, useContext, useState } from "react";
+import { useContext, useState } from "react";
 
 const MyPlanPage = () => {
   const { todaysPlan, savedExercies } = useContext(ExerciesContext);

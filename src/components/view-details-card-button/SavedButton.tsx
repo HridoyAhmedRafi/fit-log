@@ -2,7 +2,7 @@
 import { ExerciesContext } from "@/context/ExerciesContext";
 import { IExercise } from "@/types/exercise.type";
 import { useContext } from "react";
-import toast, { Toaster } from "react-hot-toast";
+import toast from "react-hot-toast";
 import { FaRegBookmark } from "react-icons/fa";
 
 const SavedButton = ({ exercise }: { exercise: IExercise }) => {
