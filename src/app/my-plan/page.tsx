@@ -100,9 +100,9 @@ const MyPlanPage = () => {
             </button>
           </div>
 
-          <div className="flex items-center gap-2">
-            <span className=" whitespace-nowrap text-sm font-semibold text-[#8A92A0]">
-              Sort by:
+          <div className="flex items-center gap-4">
+            <span className=" font-semibold whitespace-nowrap text-sm font-semibold text-[#8A92A0]">
+              Sort by
             </span>
 
             <select
@@ -110,7 +110,7 @@ const MyPlanPage = () => {
               onChange={(e) =>
                 setSortBy(e.target.value as "duration" | "calories" | "rating")
               }
-              className="select select-sm rounded-[10px] border-[#242832] bg-[#0c0d10] font-semibold text-white"
+              className="px-15 py-5 select select-sm rounded-[10px] border-[#242832] bg-[#171a21] font-semibold text-white"
             >
               <option value="duration">Duration</option>
               <option value="calories">Calories</option>
@@ -129,7 +129,7 @@ const MyPlanPage = () => {
               />
             ))
           ) : (
-            <div className="py-20 border border-[#232732] flex items-center justify-center ">
+            <div className="py-20 border-2 border-dotted rounded-[15px] border-[#232732] flex items-center justify-center ">
               <div className="space-y-3">
                 <h1 className="text-[20px] font-bold text-white text-center">
                   NOTHING HERE YET
