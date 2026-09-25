@@ -8,8 +8,25 @@ import { useContext, useState } from "react";
 const MyPlanPage = () => {
   const { todaysPlan, savedExercies } = useContext(ExerciesContext);
 
+  const [sortBy, setSortBy] = useState<"duration" | "calories" | "rating">(
+    "duration",
+  );
+
   const [activeTab, setActiveTab] = useState<"today" | "saved">("today");
   const activeExercises = activeTab === "today" ? todaysPlan : savedExercies;
+  const sortedExercises = [...activeExercises].sort((a, b) => {
+    if (sortBy === "duration") {
+      return b.duration - a.duration;
+    }
+    if (sortBy === "calories") {
+      return b.caloriesBurned - a.caloriesBurned;
+    }
+    if (sortBy === "rating") {
+      return b.rating - a.rating;
+    }
+    return 0;
+  });
+
   const totalExercises = activeExercises.length;
   const totalMinutes = activeExercises.reduce(
     (total, exercise) => total + exercise.duration,
@@ -83,16 +100,28 @@ const MyPlanPage = () => {
             </button>
           </div>
 
-          <select className="select select-sm border-[#242832] bg-[#15171D] text-[#D1D5DB]">
-            <option>Duration</option>
-            <option>Calories</option>
-            <option>Rating</option>
-          </select>
+          <div className="flex items-center gap-2">
+            <span className=" whitespace-nowrap text-sm font-semibold text-[#8A92A0]">
+              Sort by:
+            </span>
+
+            <select
+              value={sortBy}
+              onChange={(e) =>
+                setSortBy(e.target.value as "duration" | "calories" | "rating")
+              }
+              className="select select-sm rounded-[10px] border-[#242832] bg-[#0c0d10] font-semibold text-white"
+            >
+              <option value="duration">Duration</option>
+              <option value="calories">Calories</option>
+              <option value="rating">Rating</option>
+            </select>
+          </div>
         </div>
 
         <div className="mt-5">
           {activeExercises.length > 0 ? (
-            activeExercises.map((plan) => (
+            sortedExercises.map((plan) => (
               <ActiveTabCard
                 plan={plan}
                 key={plan.id}
@@ -125,5 +154,4 @@ const MyPlanPage = () => {
     </div>
   );
 };
-
 export default MyPlanPage;

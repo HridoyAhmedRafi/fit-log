@@ -88,7 +88,6 @@ const CardLoading = () => {
                 </div>
               </div>
             </div>
-
             <div className="flex gap-3">
               <div className="h-11 flex-1 rounded-lg bg-[#2A2E38]" />
               <div className="h-11 flex-1 rounded-lg bg-[#2A2E38]" />

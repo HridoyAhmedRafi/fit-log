@@ -113,5 +113,4 @@ const ViewDetailsCard = ({ exercise }: { exercise: IExercise }) => {
     </div>
   );
 };
-
 export default ViewDetailsCard;

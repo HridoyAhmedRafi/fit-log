@@ -15,7 +15,6 @@ const loading = () => {
             <div className="h-4 w-2/3 rounded bg-[#2A2E38]" />
             <div className="h-4 w-1/2 rounded bg-[#2A2E38]" />
           </div>
-
           <div className="h-10 w-40 rounded bg-[#2A2E38]" />
         </div>
 
@@ -37,9 +36,7 @@ const loading = () => {
               </div>
 
               <div className="h-6 w-3/4 rounded bg-[#2A2E38]" />
-
               <div className="mt-2 h-4 w-1/2 rounded bg-[#2A2E38]" />
-
               <div className="my-5 border-t border-[#252830]" />
 
               <div className="flex gap-5">
@@ -54,5 +51,4 @@ const loading = () => {
     </div>
   );
 };
-
 export default loading;
